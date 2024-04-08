@@ -36,7 +36,50 @@ public class indexPage {
 
 	@FindBy(xpath="(//*[@id='signInSubmit']")
 	WebElement sigInSubmit;
+
+	@FindBy(xpath="(//*[@id='createAccountSubmit']")
+	WebElement createamazonaccount;
+
+	@FindBy(xpath="(//*[@type='text']")
+	WebElement yourname;
+
+	@FindBy(xpath="(//*[@type='tel']")
+	WebElement phone;
+
+	@FindBy(xpath="(//*[@type='password']")
+	WebElement createpassword;
+
+	@FindBy(xpath="(//*[@type='submit']")
+	WebElement verifymobilenumber;
+
+
+	public indexPage() {
+
+	}
+	public void verifymobilenumber(){
+		verifymobilenumber.click();
+
+	}
+public void createpassword(){
+		createpassword.sendKeys("Testbond@123");
+
+}
+
+	public void enterphonenumer(){
+		phone.sendKeys("7827808511");
+
+	}
+
+
+	public void enteryourname(){
+	yourname.sendKeys("Inder");
+
+}
 	//identify action on webelement
+	public void createamazonaccount(){
+		createamazonaccount.click();
+
+	}
 	public void menulink(){
 
 		menulink.click();
@@ -66,5 +109,8 @@ public class indexPage {
 	{
 		sigInSubmit.click();
 	}
+
+
+
 
 }
