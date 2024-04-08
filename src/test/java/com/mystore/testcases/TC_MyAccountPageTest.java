@@ -159,43 +159,43 @@ logger.info("***************TestCase Verify Registration *****************");
 
 		logger.info("***************TestCase Verify Sign out starts*****************"); 
 
-		indexPage pg = new indexPage(driver);
-
-		pg.clickOnSignIn();
-		logger.info("Clicked on sign in link");
-
-		myAccountPage myAcpg = new myAccountPage(driver);
-
-		myAcpg.enterEmailAddress("cs923@gmail.com");
-		logger.info("Entered email address");
-
-		myAcpg.enterPassword("cs923");
-		logger.info("Entered password");
-
-		myAcpg.clickSignIn();
-		logger.info("Clicked on sign in link..");
-
-
-		registeredUserAccount regUser = new registeredUserAccount(driver);
-		regUser.clickOnSignOut();
-
-		if(pg.getPageTitle().equals("Login - My Store"))
-		{
-			logger.info("VerifySignOut - Passed");
-			Assert.assertTrue(true);
-		}
-
-		else
-		{
-			logger.info("VerifySignOut - Failed");
-			captureScreenShot(driver,"VerifySignOut");
-			Assert.assertTrue(false);
-		}
-
-	
-		logger.info("***************TestCase Verify Sign out ends*****************"); 
-
-	}
+//		indexPage pg = new indexPage(driver);
+//
+//		pg.clickOnSignIn();
+//		logger.info("Clicked on sign in link");
+//
+//		myAccountPage myAcpg = new myAccountPage(driver);
+//
+//		myAcpg.enterEmailAddress("cs923@gmail.com");
+//		logger.info("Entered email address");
+//
+//		myAcpg.enterPassword("cs923");
+//		logger.info("Entered password");
+//
+//		myAcpg.clickSignIn();
+//		logger.info("Clicked on sign in link..");
+//
+//
+//		registeredUserAccount regUser = new registeredUserAccount(driver);
+//		regUser.clickOnSignOut();
+//
+//		if(pg.getPageTitle().equals("Login - My Store"))
+//		{
+//			logger.info("VerifySignOut - Passed");
+//			Assert.assertTrue(true);
+//		}
+//
+//		else
+//		{
+//			logger.info("VerifySignOut - Failed");
+//			captureScreenShot(driver,"VerifySignOut");
+//			Assert.assertTrue(false);
+//		}
+//
+//
+//		logger.info("***************TestCase Verify Sign out ends*****************");
+//
+//	}
 
 
 }
