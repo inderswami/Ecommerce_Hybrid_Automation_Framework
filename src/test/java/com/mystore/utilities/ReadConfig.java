@@ -11,7 +11,7 @@ public class ReadConfig {
 	Properties properties;
 	//C:\Users\Inder jeet\Desktop\CS_AutomationFramework\MyStoreV1\Configuration\config.properties
 
-	String path = "C:\\Users\\Inder jeet\\Downloads\\CS_FrameworkSeleniumJava-master\\CS_FrameworkSeleniumJava-master\\Configuration\\config.properties";
+	String path = System.getProperty("user.dir")+"\\Configuration\\config.properties";
 
 	//constructor
 	public ReadConfig() {
@@ -49,7 +49,7 @@ public class ReadConfig {
 			throw new RuntimeException("url not specified in config file.");
 
 	}
-	
+
 	public String getEmail()
 	{
 		String email = properties.getProperty("email");
@@ -57,7 +57,7 @@ public class ReadConfig {
 			return email;
 		else
 			throw new RuntimeException("email not specified in config file.");
-		
+
 	}
 
 	public String getPassword()
@@ -67,7 +67,7 @@ public class ReadConfig {
 			return password;
 		else
 			throw new RuntimeException("password not specified in config file.");
-		
+
 	}
 
 }

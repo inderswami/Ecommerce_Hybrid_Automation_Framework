@@ -9,13 +9,14 @@ public class Get_Method_API_Automation {
         @Test
         public void testName() {
 
-            Response response= RestAssured.get("https://reqres.in/api/user?page=2");
+            Response response= RestAssured.get("https://httpbin.org/get");
             System.out.println("Response code"+response.getStatusCode());
             System.out.println("Response code:"+response.getBody().asString());
             System.out.println("Response code:"+response.getTime());
             System.out.println("Response code:"+response.getHeader("Content-type"));
 
             int statuscode= response.statusCode();
+            System.out.println(statuscode);
         }
 
 

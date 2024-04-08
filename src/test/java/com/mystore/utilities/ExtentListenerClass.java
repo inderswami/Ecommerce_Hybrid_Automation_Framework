@@ -35,8 +35,8 @@ public class ExtentListenerClass implements ITestListener{
 		//add system information/environment info to reports
 		reports.setSystemInfo("Machine:", "testpc1");
 		reports.setSystemInfo("OS", "windows 11");
-		reports.setSystemInfo("browser:", readConfig.getBrowser());
-		reports.setSystemInfo("user name:", "Prachi");
+		reports.setSystemInfo("browser:", "Chrome");
+		reports.setSystemInfo("user name:", "Inder");
 		
 		//configuration to change look and feel of report
 		htmlReporter.config().setDocumentTitle("Extent Listener Report Demo");

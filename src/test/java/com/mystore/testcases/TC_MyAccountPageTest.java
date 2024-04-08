@@ -13,6 +13,18 @@ import com.mystore.pageobject.registeredUserAccount;
 
 public class TC_MyAccountPageTest extends BaseClass {
 
+	@Test(enabled=true)
+	public void searchresult(){
+		indexPage pg=new indexPage();
+        try {
+            Thread.sleep(7000);
+			pg.searchbox();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+	}
 
 	@Test(enabled=false)
 	public void verifyRegistrationAndLogin()
@@ -20,11 +32,17 @@ public class TC_MyAccountPageTest extends BaseClass {
 indexPage pg=new indexPage();
 logger.info("***************TestCase Verify Registration *****************");
 		pg.menulink();
-		pg.createamazonaccount();
-		pg.enteryourname();
-		pg.enterphonenumer();
-		pg.enterpassword();
-		pg.verifymobilenumber();
+        try {
+            Thread.sleep(80000);
+			pg.createamazonaccount();
+			pg.enteryourname();
+			pg.enterphonenumer();
+			pg.enterpassword();
+			pg.verifymobilenumber();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
 
 //
 //
@@ -72,7 +90,7 @@ logger.info("***************TestCase Verify Registration *****************");
 
 	}
 
-	@Test(priority = 1)
+	@Test(enabled = false)
 	public void VerifyLogin() throws IOException, InterruptedException {
 
 		logger.info("***************TestCase Verify Login starts*****************"); 

@@ -13,7 +13,7 @@ public class Put_Method_API_Automation {
         jsondata.put("name", "Sheetal");
         jsondata.put("job", "Teacher");
 
-        RestAssured.baseURI="https://reqres.in/api/user";
+        RestAssured.baseURI="https://reqres.in/api/user/838";
         RestAssured.given().header("Contnent-Type","application/json").
                 contentType(ContentType.JSON).
                 body(jsondata).

@@ -53,10 +53,26 @@ public class indexPage {
 	WebElement verifymobilenumber;
 
 
+@FindBy(xpath="(//*[@class='nav-input nav-progressive-attribute'])[1]")
+WebElement searchbox;
+
+	@FindBy(xpath="(//*[@class='nav-input nav-progressive-attribute'])[2]")
+	WebElement searchboxclick;
+
 	public indexPage() {
 
 	}
-	public void verifymobilenumber(){
+
+	public void searchbox() {
+		searchbox.sendKeys("Mobile");
+	}
+
+	public void searchboxclick(){
+		searchboxclick.click();
+
+	}
+
+		public void verifymobilenumber(){
 		verifymobilenumber.click();
 
 	}
