@@ -21,6 +21,10 @@ indexPage pg=new indexPage();
 logger.info("***************TestCase Verify Registration *****************");
 		pg.menulink();
 		pg.createamazonaccount();
+		pg.enteryourname();
+		pg.enterphonenumer();
+		pg.enterpassword();
+		pg.verifymobilenumber();
 
 //
 //
