@@ -13,35 +13,34 @@ import com.mystore.pageobject.registeredUserAccount;
 
 public class TC_MyAccountPageTest extends BaseClass {
 
-	@Test(enabled=true)
-	public void searchresult(){
-		indexPage pg=new indexPage();
-        try {
-            Thread.sleep(7000);
+	@Test(enabled = true)
+	public void searchresult() {
+		indexPage pg = new indexPage();
+		try {
+			Thread.sleep(7000);
 			pg.searchbox();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
 
 
 	}
 
-	@Test(enabled=false)
-	public void verifyRegistrationAndLogin()
-	{
-indexPage pg=new indexPage();
-logger.info("***************TestCase Verify Registration *****************");
+	@Test(enabled = false)
+	public void verifyRegistrationAndLogin() {
+		indexPage pg = new indexPage();
+		logger.info("***************TestCase Verify Registration *****************");
 		pg.menulink();
-        try {
-            Thread.sleep(80000);
+		try {
+			Thread.sleep(80000);
 			pg.createamazonaccount();
 			pg.enteryourname();
 			pg.enterphonenumer();
 			pg.enterpassword();
 			pg.verifymobilenumber();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
 
 
 //
@@ -86,17 +85,17 @@ logger.info("***************TestCase Verify Registration *****************");
 //
 //		Assert.assertEquals("Prachi Gupta", userName);
 //
-		logger.info("***************TestCase Verify Registration and Login ends*****************"); 
+		logger.info("***************TestCase Verify Registration and Login ends*****************");
 
 	}
 
 	@Test(enabled = false)
 	public void VerifyLogin() throws IOException, InterruptedException {
 
-		logger.info("***************TestCase Verify Login starts*****************"); 
+		logger.info("***************TestCase Verify Login starts*****************");
 
 		indexPage pg = new indexPage(driver);
-        try{
+		try {
 			pg.menulink();
 			//driver.get("https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fdp%2FB0CHQKRVMQ%3Ftag%3Dgoogmantxtmob674-21%26ascsubtag%3D_k_Cj0KCQjw-_mvBhDwARIsAA-Q0Q5RSf4eFcZXswACIv35zXlGWZTQfQFWsEkKyWZFUC-uuzlPwBiceecaAkb-EALw_wcB_k_%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
 			Thread.sleep(9000);
@@ -111,11 +110,9 @@ logger.info("***************TestCase Verify Registration *****************");
 			logger.info("Password has been entered");
 			pg.signInSumbit();
 			logger.info("Sign in button clicked");
-		}
-		catch (Exception e){
+		} catch (Exception e) {
 			System.out.println("Error");
 		}
-
 
 
 //		myAccountPage myAcpg = new myAccountPage(driver);
@@ -147,17 +144,16 @@ logger.info("***************TestCase Verify Registration *****************");
 //
 //		}
 
-		logger.info("***************TestCase Verify Login ends*****************"); 
+		logger.info("***************TestCase Verify Login ends*****************");
 
 
 	}
 
 
 	@Test(enabled = false)
-	public void VerifySignOut() throws IOException 
-	{
+	public void VerifySignOut() throws IOException {
 
-		logger.info("***************TestCase Verify Sign out starts*****************"); 
+		logger.info("***************TestCase Verify Sign out starts*****************");
 
 //		indexPage pg = new indexPage(driver);
 //
@@ -198,4 +194,5 @@ logger.info("***************TestCase Verify Registration *****************");
 //	}
 
 
+	}
 }
