@@ -17,8 +17,11 @@ public class TC_MyAccountPageTest extends BaseClass {
 	@Test(enabled=false)
 	public void verifyRegistrationAndLogin()
 	{
-//
-//		logger.info("***************TestCase Verify Registration and Login starts*****************");
+indexPage pg=new indexPage();
+logger.info("***************TestCase Verify Registration *****************");
+		pg.menulink();
+		pg.createamazonaccount();
+
 //
 //
 //		indexPage pg = new indexPage(driver);
@@ -80,14 +83,15 @@ public class TC_MyAccountPageTest extends BaseClass {
 			logger.info("Username or email entered");
 			pg.clickOnTShirtMenu();
 			logger.info("Clicked on continoue button");
-			Thread.sleep(9000);
+			System.out.println("continoue clicked");
+			Thread.sleep(12000);
 			pg.enterpassword();
 			logger.info("Password has been entered");
 			pg.signInSumbit();
 			logger.info("Sign in button clicked");
 		}
 		catch (Exception e){
-
+			System.out.println("Error");
 		}
 
 
