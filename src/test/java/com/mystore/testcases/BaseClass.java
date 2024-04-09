@@ -75,11 +75,11 @@ public class BaseClass {
 
 
 	@AfterClass
-//	public void tearDown()
-//	{
-//		driver.close();
-//		driver.quit();
-//	}
+	public void tearDown()
+	{
+		driver.close();
+		driver.quit();
+	}
 
 	
 	//user method to capture screen shot
