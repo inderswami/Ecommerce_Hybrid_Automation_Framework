@@ -1,5 +1,6 @@
 package com.mystore.pageobject;
 
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -107,11 +108,37 @@ WebElement clickonsearchitem;
 	//
 	@FindBy(xpath = "(//*[@class='a-button-input'])[2]")
 	WebElement addressconfirm;
+//
+@FindBy(xpath = "//*[@class='editNameIcon']")
+WebElement editprofile;
 
 	public indexPage() {
 
 	}
-//
+public void editprofile(){
+
+	editprofile.click();
+}
+
+public void swtitchtoeditprofilepop(){
+	driver.switchTo().alert();
+	driver.findElement(By.xpath("//*[@id='editProfileNameInputId']")).sendKeys("inder1");
+    try {
+        Thread.sleep(2000);
+    } catch (InterruptedException e) {
+        throw new RuntimeException(e);
+    }
+    driver.findElement(By.xpath("//input[@aria-labelledby='editProfileContinueButton-announce']"));
+    try {
+        Thread.sleep(3000);
+		String updatedname=driver.findElement(By.xpath("//*[@class='profile-name desktop']")).getText();
+		System.out.println("Updatedname"+"::"+updatedname);
+
+    } catch (InterruptedException e) {
+        throw new RuntimeException(e);
+    }
+}
+
 	public void selectpaymentmethod(){
 		//WebElement radiobutton=driver.findElement(By.xpath("(//*[text()='Net Banking'])[1]"));
 		//radiobutton.click();

@@ -56,6 +56,11 @@ public class TC_MyAccountPageTest extends BaseClass {
 			System.out.println("Order page has been opened");
 			pg.profile();
 			System.out.println("Profile section has been opened");
+			pg.editprofile();
+			System.out.println("Profile has been opened in profile in edit mode");
+			Thread.sleep(3000);
+			//pg.swtitchtoeditprofilepop();
+
             }
 		catch (Exception e){
 			System.out.println("Login failed");
