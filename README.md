@@ -1,4 +1,4 @@
-**Pre-Reques: Java 1.8 or higher is required to run the code.**
+**Pre-Requests: Java 1.8 or higher is required to run the code.**
 
 **Programming language Used: Java**
 
