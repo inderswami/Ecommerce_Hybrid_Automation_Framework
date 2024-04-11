@@ -9,6 +9,7 @@
 **Unit Testing Framework:TestNG**
 
 **Path of test cases:Project/src/test/java/com.mystore**
+**Website under Test:Amazon.in**
 
 **We can run the text cases via "TC_MyAccountPageTest.java" simply hit run button.
 We want to run each test seperatly than navigate to indivisual test and click on run.
