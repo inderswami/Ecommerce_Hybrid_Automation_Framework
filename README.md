@@ -4,7 +4,7 @@
 
 **Automation Framework: Hybrid**
 
-**Design Apttern:Page Object model**
+**Design Ptatern:Page Object model**
 
 **Unit Testing Framework:TestNG**
 
